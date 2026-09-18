@@ -14,19 +14,20 @@ public class Studententity {
 
     private String name;
     private String email;
-    private String department;
-    private int age;
+    private String course;
 
+    // Default constructor
     public Studententity() {
     }
 
-    public Studententity(String name, String email, String department, int age) {
+    // Constructor
+    public Studententity(String name, String email, String course) {
         this.name = name;
         this.email = email;
-        this.department = department;
-        this.age = age;
+        this.course = course;
     }
 
+    // Getter and Setter for ID
     public Long getId() {
         return id;
     }
@@ -35,6 +36,7 @@ public class Studententity {
         this.id = id;
     }
 
+    // Getter and Setter for Name
     public String getName() {
         return name;
     }
@@ -43,6 +45,7 @@ public class Studententity {
         this.name = name;
     }
 
+    // Getter and Setter for Email
     public String getEmail() {
         return email;
     }
@@ -51,19 +54,12 @@ public class Studententity {
         this.email = email;
     }
 
-    public String getDepartment() {
-        return department;
+    // Getter and Setter for Course
+    public String getCourse() {
+        return course;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    public void setCourse(String course) {
+        this.course = course;
     }
 }
