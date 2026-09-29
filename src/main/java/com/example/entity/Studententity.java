@@ -1,33 +1,28 @@
 package com.example.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Studententity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
     private String email;
     private String course;
 
-    // Default constructor
     public Studententity() {
     }
 
-    // Constructor
-    public Studententity(String name, String email, String course) {
+    public Studententity(Long id, String name, String email, String course) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.course = course;
     }
 
-    // Getter and Setter for ID
     public Long getId() {
         return id;
     }
@@ -36,7 +31,6 @@ public class Studententity {
         this.id = id;
     }
 
-    // Getter and Setter for Name
     public String getName() {
         return name;
     }
@@ -45,7 +39,6 @@ public class Studententity {
         this.name = name;
     }
 
-    // Getter and Setter for Email
     public String getEmail() {
         return email;
     }
@@ -54,7 +47,6 @@ public class Studententity {
         this.email = email;
     }
 
-    // Getter and Setter for Course
     public String getCourse() {
         return course;
     }
